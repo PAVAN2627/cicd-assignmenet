@@ -261,24 +261,40 @@ pipeline {
 
 ### EC2 Instance & Application Screenshots
 
-| # | Description | Screenshot |
-|---|-------------|------------|
-| 1 | Create folder with simple Flask application and deploy on GitHub | ![Screenshot 1](screenshots/1.png) |
-| 2 | Create EC2 instance and connect with CLI | ![Screenshot 2](screenshots/2.png) |
-| 3 | Clone the simple application Git repo in EC2 | ![Screenshot 3](screenshots/3.png) |
-| 4 | Install all dependencies in EC2 | ![Screenshot 4](screenshots/4.png) |
-| 5 | Start PM2 for backend | ![Screenshot 5](screenshots/5.png) |
-| 6 | Start PM2 for both frontend and backend running at a time | ![Screenshot 6](screenshots/6.png) |
-| 7 | EC2 running on dashboard | ![Screenshot 7](screenshots/7.png) |
+**1. Create folder with simple Flask application and deploy on GitHub**
+![Screenshot 1](deployec2/screenshots/1.png)
+
+**2. Create EC2 instance and connect with CLI**
+![Screenshot 2](deployec2/screenshots/2.png)
+
+**3. Clone the simple application Git repo in EC2**
+![Screenshot 3](deployec2/screenshots/3.png)
+
+**4. Install all dependencies in EC2**
+![Screenshot 4](deployec2/screenshots/4.png)
+
+**5. Start PM2 for backend**
+![Screenshot 5](deployec2/screenshots/5.png)
+
+**6. Start PM2 for both frontend and backend running at a time**
+![Screenshot 6](deployec2/screenshots/6.png)
+
+**7. EC2 running on dashboard**
+![Screenshot 7](deployec2/screenshots/7.png)
 
 ### Jenkins CI/CD Pipeline Screenshots
 
-| # | Description | Screenshot |
-|---|-------------|------------|
-| 8 | Connect with EC2 at Local and start Jenkins | ![Screenshot 8](screenshots/8.png) |
-| 9 | Deploy backend and frontend both on Jenkins with GitHub repo | ![Screenshot 9](screenshots/9.png) |
-| 10 | Backend successfully deploy status | ![Screenshot 10](screenshots/10.png) |
-| 11 | Frontend success deploy status | ![Screenshot 11](screenshots/11.png) |
+**8. Connect with EC2 at Local and start Jenkins**
+![Screenshot 8](deployec2/screenshots/8.png)
+
+**9. Deploy backend and frontend both on Jenkins with GitHub repo**
+![Screenshot 9](deployec2/screenshots/9.png)
+
+**10. Backend successfully deploy status**
+![Screenshot 10](deployec2/screenshots/10.png)
+
+**11. Frontend success deploy status**
+![Screenshot 11](deployec2/screenshots/11.png)
 
 ---
 

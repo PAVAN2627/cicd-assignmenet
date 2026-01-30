@@ -2,17 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/<your-username>/<your-repo>.git'
-            }
-        }
 
         stage('Install Backend Dependencies') {
             steps {
                 sh '''
-                cd backend
+                cd deployec2/backend
                 if [ ! -d venv ]; then
                   python3 -m venv venv
                 fi
@@ -25,9 +19,10 @@ pipeline {
             steps {
                 sh '''
                 pm2 restart flask-backend || \
-                pm2 start "backend/venv/bin/python backend/app.py" --name flask-backend
+                pm2 start "deployec2/backend/venv/bin/python deployec2/backend/app.py" --name flask-backend
                 '''
             }
         }
     }
 }
+

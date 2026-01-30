@@ -10,17 +10,11 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/<your-username>/<your-repo>.git'
-            }
-        }
 
         stage('Install Frontend Dependencies') {
             steps {
                 sh '''
-                cd frontend
+                cd deployec2/frontend
                 npm install
                 '''
             }
@@ -30,7 +24,7 @@ pipeline {
             steps {
                 sh '''
                 pm2 restart express-frontend || \
-                pm2 start frontend/server.js --name express-frontend
+                pm2 start deployec2/frontend/server.js --name express-frontend
                 '''
             }
         }

@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'node18'
+    }
+
+    environment {
+        BACKEND_URL = "http://localhost:5000"
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/<your-username>/<your-repo>.git'
+            }
+        }
+
+        stage('Install Frontend Dependencies') {
+            steps {
+                sh '''
+                cd frontend
+                npm install
+                '''
+            }
+        }
+
+        stage('Restart Express App') {
+            steps {
+                sh '''
+                pm2 restart express-frontend || \
+                pm2 start frontend/server.js --name express-frontend
+                '''
+            }
+        }
+    }
+}
